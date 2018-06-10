@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import './Table.css';
+import './TableHeaderRow.css';
+
 class TableHeaderRow extends Component {
   constructor()  {
     super();
   }
 
   renderRow() {
-    console.log(this.props.headerRow);//eslint-disable-line no-console
     return(
-      this.props.headerRow.map(function(header) {
-        return <div>{header}</div>
-      })
+      <div
+        className="table-row"
+      >
+        {this.props.headerRow.map(function(header) {
+          return(
+            <div
+              className="table-cell header-cell"
+            >
+              {header}
+            </div>
+          )
+        })}
+      </div>
     );
   }
 

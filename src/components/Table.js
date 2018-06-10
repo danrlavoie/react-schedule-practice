@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import TableHeaderRow from '../containers/TableHeaderRow';
+import TableRow from './TableRow';
 
 class Table extends Component {
   constructor()  {
@@ -11,11 +12,18 @@ class Table extends Component {
   render() {
     return(
     <div>
+    <div>{this.props.title}</div>
     <TableHeaderRow
       headerRow={this.props.headerRow}
     >
     </TableHeaderRow>
-    <div>{this.props.title}</div>
+    {this.props.rows.map(function(row) {
+      return(
+        <TableRow
+          row={row}
+        />
+      )
+    })}
     </div>
     );
   }
