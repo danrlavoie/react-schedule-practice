@@ -4,7 +4,6 @@ import Table from '../components/Table';
 
 const mapStateToProps = (store, props) => {
   return {
-    title: 'BAH',
     rows: store.csv.bodyRows || []
   }
 }

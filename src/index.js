@@ -6,6 +6,9 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+/**
+ * Connects our redux store to the application and renders the page.
+ */
 ReactDOM.render(
   <Provider store={configureStore()}>
     <App />
