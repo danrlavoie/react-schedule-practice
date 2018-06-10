@@ -1,5 +1,5 @@
-import { loadCSV } from './csv'
+import { loadDepartures } from './csv'
 
 export {
-  loadCSV
+  loadDepartures
 }; 

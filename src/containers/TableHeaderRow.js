@@ -3,7 +3,7 @@ import TableHeaderRow from '../components/TableHeaderRow';
 
 const mapStateToProps = (store, props) => {
   return {
-    headerRow: ['TimeStamp','Origin','Trip','Destination','Scheduled Time','Lateness']
+    headerRow: store.csv.headerRow || []
   }
 }
 

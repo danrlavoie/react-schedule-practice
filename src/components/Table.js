@@ -7,12 +7,8 @@ import TableRow from './TableRow';
 import { DEPARTURES_ENDPOINT } from '../constants/endpoints';
 
 class Table extends Component {
-  constructor()  {
-    super();
-  }
-
   componentDidMount() {
-    this.props.loadCSV(DEPARTURES_ENDPOINT);
+    this.props.loadDepartures(DEPARTURES_ENDPOINT);
   }
 
   render() {
@@ -39,7 +35,7 @@ Table.propTypes = {
   title: PropTypes.string,
   headerRow: PropTypes.array,
   rows: PropTypes.array,
-  loadCSV: PropTypes.func.isRequired
+  loadDepartures: PropTypes.func.isRequired
 }
 
 export default Table;

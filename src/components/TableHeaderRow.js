@@ -5,9 +5,6 @@ import './Table.css';
 import './TableHeaderRow.css';
 
 class TableHeaderRow extends Component {
-  constructor()  {
-    super();
-  }
 
   renderRow() {
     return(
