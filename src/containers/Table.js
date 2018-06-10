@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { loadCSV } from '../actions';
 import Table from '../components/Table';
 
 const mapStateToProps = (store, props) => {
@@ -8,4 +9,8 @@ const mapStateToProps = (store, props) => {
   }
 }
 
-export default connect(mapStateToProps)(Table);
+const mapDispatchToProps = dispatch => ({
+  loadCSV: filename => dispatch(loadCSV(filename))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Table);

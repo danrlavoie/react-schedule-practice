@@ -1,0 +1,1 @@
+export const DEPARTURES_ENDPOINT = 'http://developer.mbta.com/lib/gtrtfs/Departures.csv';

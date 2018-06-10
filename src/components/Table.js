@@ -4,9 +4,15 @@ import PropTypes from 'prop-types';
 import TableHeaderRow from '../containers/TableHeaderRow';
 import TableRow from './TableRow';
 
+import { DEPARTURES_ENDPOINT } from '../constants/endpoints';
+
 class Table extends Component {
   constructor()  {
     super();
+  }
+
+  componentDidMount() {
+    this.props.loadCSV(DEPARTURES_ENDPOINT);
   }
 
   render() {
@@ -32,7 +38,8 @@ class Table extends Component {
 Table.propTypes = {
   title: PropTypes.string,
   headerRow: PropTypes.array,
-  rows: PropTypes.array
+  rows: PropTypes.array,
+  loadCSV: PropTypes.func.isRequired
 }
 
 export default Table;

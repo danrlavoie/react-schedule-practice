@@ -1,4 +1,4 @@
-const loadCSV = filename => ({
-  type: LOAD_CSV,
+export const loadCSV = filename => ({
+  type: 'LOAD_CSV',
   filename
 });
