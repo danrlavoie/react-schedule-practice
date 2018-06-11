@@ -1,7 +1,10 @@
+//eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+//eslint-disable-next-line no-unused-vars
 import TableHeaderRow from '../containers/TableHeaderRow';
+//eslint-disable-next-line no-unused-vars
 import TableRow from './TableRow';
 
 import { DEPARTURES_ENDPOINT } from '../constants/endpoints';
@@ -24,17 +27,17 @@ class Table extends Component {
 
   render() {
     return(
-    <div>
-    <TableHeaderRow/>
-    {this.props.rows.map(function(row, i) {
-      return(
-        <TableRow
-          key={i}
-          row={row}
-        />
-      )
-    })}
-    </div>
+      <div>
+        <TableHeaderRow/>
+        {this.props.rows.map(function(row, i) {
+          return(
+            <TableRow
+              key={i}
+              row={row}
+            />
+          );
+        })}
+      </div>
     );
   }
 }
@@ -42,6 +45,6 @@ class Table extends Component {
 Table.propTypes = {
   rows: PropTypes.array,
   loadDepartures: PropTypes.func.isRequired
-}
+};
 
 export default Table;

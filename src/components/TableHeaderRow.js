@@ -1,3 +1,4 @@
+//eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -28,7 +29,7 @@ class TableHeaderRow extends Component {
             >
               {header}
             </div>
-          )
+          );
         })}
       </div>
     );
@@ -41,6 +42,6 @@ class TableHeaderRow extends Component {
 
 TableHeaderRow.propTypes = {
   headerRow: PropTypes.array
-}
+};
 
 export default TableHeaderRow;

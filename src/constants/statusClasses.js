@@ -1,4 +1,4 @@
-import StatusConstants from './status'
+import StatusConstants from './status';
 
 
 export const StatusClassConstants = {

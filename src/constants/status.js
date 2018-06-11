@@ -17,6 +17,6 @@ const StatusConstants = {
   DEPARTED: 'Departed',
   HOLD: 'Hold',
   END: 'End',
-}
+};
 
 export default StatusConstants;

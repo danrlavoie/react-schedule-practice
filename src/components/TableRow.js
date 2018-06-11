@@ -1,3 +1,4 @@
+//eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -10,10 +11,6 @@ import './TableRow.css';
  * 
  */
 class TableRow extends Component {
-  constructor() {
-    super()
-  }
-
   /**
    * Helper function to render table cells that use string data.
    * Will apply nice CSS classes and all that jazz.
@@ -21,15 +18,15 @@ class TableRow extends Component {
    * @param {*} key a unique identifier for the cell
    */
   renderStringCell(data, key) {
-    let classes = "table-cell text";
+    let classes = 'table-cell text';
     if (StatusClassConstants.NORMAL_STRINGS.includes(data)) {
-      classes += " normal"
+      classes += ' normal';
     }
     else if (StatusClassConstants.ABNORMAL_STRINGS.includes(data)) {
-      classes += " abnormal"
+      classes += ' abnormal';
     }
     else if (StatusClassConstants.ALERT_STRINGS.includes(data)) {
-      classes += " alert"
+      classes += ' alert';
     }
     return(
       <div
@@ -38,7 +35,7 @@ class TableRow extends Component {
       >
         {data}
       </div>
-    )
+    );
   }
 
   /**
@@ -72,7 +69,7 @@ class TableRow extends Component {
    * @param {*} key a unique identifier for the cell
    */
   renderDateCell(data, key) {
-    let classes = "table-cell date";
+    let classes = 'table-cell date';
     // Multiply by 100 to convert to millisecond notation for JS Date
     const date = new Date(parseInt(data)*1000);
 
@@ -83,7 +80,7 @@ class TableRow extends Component {
       >
         {this.humanReadableTime(date)}
       </div>
-    )
+    );
   }
 
   /**
@@ -93,7 +90,7 @@ class TableRow extends Component {
    * @param {*} key a unique identifier for the cell
    */
   renderNumberCell(data, key) {
-    let classes = "table-cell number";
+    let classes = 'table-cell number';
     // Maybe we'll need to do something with train numbers later
     // (like link them to a profile or something) but for now this
     // function is essentially a pass-through.
@@ -104,7 +101,7 @@ class TableRow extends Component {
       >
         {data}
       </div>
-    )
+    );
   }
   /**
    * Helper function for rendering this component. Ideally, during the
@@ -117,7 +114,7 @@ class TableRow extends Component {
   renderRow() {
     return(
       <div
-        className="table-row"
+        className= 'table-row'
       >
         {this.props.row.map(function(cell, i) {
           if (/^[\d]{10}$/.test(cell)) {
@@ -141,7 +138,7 @@ class TableRow extends Component {
 
 this.propTypes = {
   row: PropTypes.array
-}
+};
 
 
 export default TableRow;

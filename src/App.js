@@ -1,7 +1,10 @@
+//eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import './App.css';
+
+//eslint-disable-next-line no-unused-vars
 import Table from './containers/Table';
 
 /**

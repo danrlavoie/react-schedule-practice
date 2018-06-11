@@ -10,7 +10,7 @@ import rootReducer from './reducers/rootReducer';
  * If deploying to production, that line of code should be removed.
  * @param {Object} initialState an initial state to seed the app with, if any
  */
-export default function configureStore(initialState={}) {
+export default function configureStore() {
   return createStore(
     rootReducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),

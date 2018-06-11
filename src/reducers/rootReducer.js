@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import csv from './csv'
+import csv from './csv';
 
 /**
  * Combines together all reducers in the program
