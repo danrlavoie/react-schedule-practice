@@ -21,7 +21,7 @@ class TableHeaderRow extends Component {
       <div
         className="table-row"
       >
-        {this.props.headerRow.map(function(header, i) {
+        {this.props.headerRow && this.props.headerRow.map(function(header, i) {
           return(
             <div
               key={i}

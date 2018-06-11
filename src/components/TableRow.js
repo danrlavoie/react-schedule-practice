@@ -71,7 +71,7 @@ class TableRow extends Component {
   renderDateCell(data, key) {
     let classes = 'table-cell date';
     // Multiply by 100 to convert to millisecond notation for JS Date
-    const date = new Date(parseInt(data)*1000);
+    const date = new Date(parseInt(data, 10)*1000);
 
     return(
       <div
@@ -116,7 +116,7 @@ class TableRow extends Component {
       <div
         className= 'table-row'
       >
-        {this.props.row.map(function(cell, i) {
+        {this.props.row && this.props.row.map(function(cell, i) {
           if (/^[\d]{10}$/.test(cell)) {
             return this.renderDateCell(cell, i);
           }
@@ -136,7 +136,7 @@ class TableRow extends Component {
   }
 }
 
-this.propTypes = {
+TableRow.propTypes = {
   row: PropTypes.array
 };
 
