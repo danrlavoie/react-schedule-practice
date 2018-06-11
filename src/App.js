@@ -16,6 +16,11 @@ class App extends Component {
           <h1 className="App-title">BOSTON STATION INFORMATION</h1>
         </header>
         <Table/>
+        {
+          // At the moment, we only render one table here which loads the departures.
+          // However, it would be easy to create a second table, and a slight refactor
+          // to the actions would allow us to have a departures and an arrivals table.
+        }
       </div>
     );
   }
