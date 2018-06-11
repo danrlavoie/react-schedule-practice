@@ -1,0 +1,28 @@
+// Eventually I would want to have the css colors defined as constants to reuse
+
+.normal {
+  color: teal;
+  
+}
+
+.abnormal {
+  color: orange;
+}
+
+.alert {
+  color: red;
+}
+
+
+.text {
+  text-align: left;
+  font-weight: bold;
+}
+
+.date {
+  text-align: center;
+}
+
+.number {
+  text-align: center;
+}
